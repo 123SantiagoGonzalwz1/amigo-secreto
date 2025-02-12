@@ -28,13 +28,15 @@ function mostrarAmigos() {
 }
 
 function sortearAmigo() {
+    resultado = document.getElementById('resultado');
+
     if (amigos == "") {
         alert('No hay amigos para sortear');
     } else {
         if (amigos.length == 1) {
             alert('No hay suficientes amigos para sortear');
         } else {
-            listaAmigos.innerHTML = `<li>${amigos[Math.floor(Math.random() * amigos.length)]}</li>`;
+            resultado.innerHTML = `<li>${amigos[Math.floor(Math.random() * amigos.length)]}</li>`;
             amigos = [];
         }
     }
